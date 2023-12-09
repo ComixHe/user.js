@@ -1,0 +1,20 @@
+# .github/workflows/sync.yml
+name: Sync Fork
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '* * 15,30 * *'
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: tgymnich/fork-sync@v1.9.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: arkenfox
+          head: master
+          base: master
+          pr_title: sync upstream
+          merge_method: rebase
