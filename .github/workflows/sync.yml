@@ -5,7 +5,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron: '* * 15,30 * *'
+    - cron: '* * 30 * *'
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
