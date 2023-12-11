@@ -1,1 +1,1 @@
-user_perf("privacy.resistFingerprinting.letterboxing". false)
+user_pref("privacy.resistFingerprinting.letterboxing", false);
